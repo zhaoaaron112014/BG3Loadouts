@@ -104,7 +104,7 @@ form select:focus {
 
 /* Clear Storage Button */
 #clearStorageBtn {
-    background-color: #28a745;
+    background-color: #dc3545;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -116,7 +116,7 @@ form select:focus {
 }
 
 #clearStorageBtn:hover {
-    background-color: #218838;
+    background-color: #c82333;
 }
 
 /* Table Layout Improvements */
