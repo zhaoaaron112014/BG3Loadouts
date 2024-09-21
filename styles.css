@@ -1,0 +1,257 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h3 {
+    margin-top: 40px;
+    color: #495057;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 10px;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px;
+    
+}
+
+.table thead th {
+    background-color: #343a40;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.table tbody td {
+    background-color: white;
+    font-size: 0.85rem;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+}
+
+/* Buttons */
+button, input[type="button"] {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 5px;
+}
+
+button:hover, input[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="button"].remBtn {
+    background-color: #dc3545;
+}
+
+input[type="button"].remBtn:hover {
+    background-color: #c82333;
+}
+
+/* Search Bars */
+input[type="text"] {
+    width: 60%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 0.9rem;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Dropdown Styling */
+form select {
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    font-size: 0.9rem;
+    background-color: #f8f9fa;
+    transition: border-color 0.2s ease-in-out;
+}
+
+form select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Clear Storage Button */
+#clearStorageBtn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#clearStorageBtn:hover {
+    background-color: #218838;
+}
+
+/* Table Layout Improvements */
+table {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    table, .form-select, input[type="text"] {
+        width: 100% !important;
+    }
+
+    .w-75 {
+        width: 100% !important;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .table th, .table td {
+        padding: 10px;
+    }
+}   
+
+/* Make the Description column wider */
+.loadout th:nth-child(8),
+.loadout td:nth-child(8),
+.searchTable th:nth-child(8),
+.searchTable td:nth-child(8)  {
+    width: 20%; /* Adjust description width as needed */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+.loadout th:nth-child(1),
+.loadout td:nth-child(1),
+.searchTable th:nth-child(1),
+.searchTable td:nth-child(1)  {
+    width: 4%; /* Adjust description width as needed */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break correctly */
+}
+.loadout th:nth-child(2),
+.loadout td:nth-child(2),
+.searchTable th:nth-child(2),
+.searchTable td:nth-child(2)  {
+    width: 6%; /* Adjust description width as needed */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+.loadout th:nth-child(3),
+.loadout td:nth-child(3),
+.searchTable th:nth-child(3),
+.searchTable td:nth-child(3)  {
+    width: 8%; /* Adjust description width as needed */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break correctly */
+}
+.loadout th:nth-child(4),
+.loadout td:nth-child(4),
+.searchTable th:nth-child(4),
+.searchTable td:nth-child(4)  {
+    width: 8%; /* Adjust description width as needed */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+.loadout th:nth-child(5),
+.loadout td:nth-child(5),
+.searchTable th:nth-child(5),
+.searchTable td:nth-child(5)  {
+    width: 10%; /* Adjust description width as needed */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+.loadout th:nth-child(6),
+.loadout td:nth-child(6),
+.searchTable th:nth-child(6),
+.searchTable td:nth-child(6)  {
+    width: 8%; /* Adjust description width as needed */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+.loadout th:nth-child(7),
+.loadout td:nth-child(7),
+.searchTable th:nth-child(7),
+.searchTable td:nth-child(7)  {
+    width: 8%; /* Adjust description width as needed */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+.loadout th:nth-child(9),
+.loadout td:nth-child(9),
+.searchTable th:nth-child(9),
+.searchTable td:nth-child(9)  {
+    width: 8%; /* Adjust description width as needed */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+.loadout th:nth-child(10),
+.loadout td:nth-child(10),
+.searchTable th:nth-child(10),
+.searchTable td:nth-child(10)  {
+    width: 10%; /* Adjust description width as needed */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+.loadout th:nth-child(11),
+.loadout td:nth-child(11),
+.searchTable th:nth-child(11),
+.searchTable td:nth-child(11)  {
+    width: 5%; /* Adjust description width as needed */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break correctly */
+}
+
+.loadout th:nth-child(12),
+.loadout td:nth-child(12),
+.searchTable th:nth-child(12),
+.searchTable td:nth-child(12)  {
+    width: 5%; /* Adjust description width as needed */
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Ensure long words break correctly */
+}
