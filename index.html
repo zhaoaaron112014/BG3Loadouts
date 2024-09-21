@@ -293,6 +293,12 @@
                     console.log(btn.currentTarget.param)
                     console.log(btn.currentTarget.param.children[3].innerHTML)
 
+                    let name = btn.currentTarget.param.children[1].children[0].innerHTML;
+                    console.log(name);
+                    if (localStorage.getItem(name) != null){
+                        return;
+                    }
+
                     let type = btn.currentTarget.param.children[3].innerHTML;
 
                     for (i = 0; i < RANGED_WEAPONS.length; i++){
@@ -308,7 +314,6 @@
 
                     let idName = type + "Table";
                     var curr = btn.currentTarget.param;
-                    console.log(curr);
                     insertToLoadout(idName, curr);
                     
 
@@ -411,10 +416,8 @@
                         
                     })
 
-                    //Add selected items to Loadout
-                    
+                    //Add selected items to Loadout with buttons
                     let rows = tbody.children;
-
                     for (let i = 0; i < rows.length; i++){
                         const button = rows[i].children[11];
                         button.addEventListener("click", loadoutAdd)
@@ -427,16 +430,14 @@
 
                 //Filter table by category
                 var category = document.getElementById("category");
-                
-
+            
                 function filter(){
                     console.log("Filtering" + category.value)
                     if (category.value == '0'){
                         console.log("No Filter")
+                        tbody.innerHTML = originalData;
                         return;
                     }
-                    
-                    
                     
                     tbody.innerHTML = originalData;
                     let filteredRows = '';
@@ -462,8 +463,14 @@
                             filteredRows += rows[i].outerHTML;  
                         }
                     }
-                    console.log("Filtered Rows: " + filteredRows)
+                    //console.log("Filtered Rows: " + filteredRows)
                     tbody.innerHTML = filteredRows;
+
+                    for (let i = 0; i < rows.length; i++){
+                        const button = rows[i].children[11];
+                        button.addEventListener("click", loadoutAdd)
+                        button.param = rows[i];   
+                    }
                     return;
                 }
                 category.addEventListener('change', filter);
@@ -475,7 +482,6 @@
                     const searchQuery = searchbar.value.toLowerCase();
                     for (const row of rows){
                         const value = row.children[1].children[0].innerHTML.toLowerCase();
-                        //console.log(value);
                         row.style.visibility=null;
 
                         if (value.search(searchQuery) === -1){
